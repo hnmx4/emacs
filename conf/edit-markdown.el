@@ -4,6 +4,8 @@
 ;;; Code:
 ;;; markdown-mode
 (require 'markdown-mode)
+(setq auto-mode-alist
+      (append '(("\\.md$" . markdown-mode)) auto-mode-alist))
 
 (defun eww-open-file-other-window (file)
   (if (one-window-p)(split-window))
